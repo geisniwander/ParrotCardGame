@@ -1,0 +1,79 @@
+h1{
+    font-family: 'Roboto', sans-serif;
+    font-size: 56px;
+    font-weight: 700;
+    line-height: 66px;
+    color: #75B79E;
+    margin-top: 50px;
+    
+}
+.conteudo{
+    width: 100%;
+    height: 980px;
+    background-color: #EEF9BF;
+    display:flex;
+    flex-direction: column;
+    align-items: center;
+}
+.titulo{
+    display: flex;
+    justify-content: center;
+}
+.carta{
+    width: 117px;
+    height: 146px;
+    background-color: #A7E9AF;
+    border: 1px solid #99CEA8;
+    border-radius: 5px;
+    background-image: url("./front\ .png");
+    background-repeat: no-repeat;
+    background-position: center center;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-left: 40px;
+    margin-top: 40px;
+}
+.cartas{
+    width: 65%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-wrap: wrap;
+}
+
+@media (max-width:934px) {
+    .conteudo{
+        width: 100%;
+        height: 100%;
+    }
+    .titulo{
+        text-align: center;
+    }
+    .cartas{
+        width: 100%;
+        height: 95%;
+    }
+    .carta{
+        width: 30%;
+    }
+}
+
+@media (max-width:500px) {
+    .conteudo{
+        width: 100%;
+        height: 100%;
+    }
+    .titulo{
+        text-align: center;
+    }
+    .cartas{
+        flex-direction: column;
+        width: 100%;
+        height: 95%;
+    }
+    .carta{
+        margin-left:0;
+        width: 30%;
+    }
+}
