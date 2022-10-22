@@ -22,17 +22,39 @@ h1{
 .carta{
     width: 117px;
     height: 146px;
+    margin-left: 30px;
+    margin-top: 30px;
+    position: relative;
+}
+
+.face{
+    width: 100%;
+    height: 100%;
     background-color: #A7E9AF;
     border: 1px solid #99CEA8;
-    border-radius: 5px;
-    background-image: url("./front\ .png");
-    background-repeat: no-repeat;
-    background-position: center center;
+    border-radius: 10px;
     display: flex;
     align-items: center;
     justify-content: center;
-    margin-left: 40px;
-    margin-top: 40px;
+    position: absolute;
+    backface-visibility: hidden;
+    transition: all .5s;
+    transform-style: preserve-3d;
+}
+.verso{
+    transform: rotateY(180deg);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.verso-vira {
+    transform: rotateY(0deg);
+}
+.frente-vira {
+    transform: rotateY(-180deg);
+}
+.verso img{
+    width:80%;
 }
 .cartas{
     width: 65%;
@@ -41,6 +63,7 @@ h1{
     justify-content: center;
     flex-wrap: wrap;
 }
+
 
 @media (max-width:934px) {
     .conteudo{
