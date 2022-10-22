@@ -41,6 +41,14 @@ h1{
     transition: all .5s;
     transform-style: preserve-3d;
 }
+.frente{
+    background-image: url(../images/parrot.png);
+    background-position: center center;
+    display: flex;
+    justify-content: center;
+    justify-items: center;
+    background-repeat: no-repeat;
+}
 .verso{
     transform: rotateY(180deg);
     display: flex;
