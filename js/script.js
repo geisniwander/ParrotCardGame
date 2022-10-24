@@ -2,6 +2,8 @@
 let numCartas=0;
 let jogadas=0;
 let finalizadas=0;
+let cont=0;
+let tempo=-1;
 const container = document.querySelector(".cartas");
 const cartas=[
     `<div class="carta 1">
@@ -63,13 +65,11 @@ function adicionaCartas(){
         container.innerHTML += array[j];
         j++;
     }
-
+    container.innerHTML +=`<div class="relogio"></div>`
 }
-
 function comparador() { 
 	return Math.random() - 0.5; 
 }
-let cont=0;
 function virarCarta(carta){
     jogadas++;
     cont++;
@@ -82,9 +82,7 @@ function virarCarta(carta){
     if(cont==2){
         cont=0;
         setTimeout(verificaIgualdade,500);
-
     }
-
 }
 
 function voltarCarta(c1,c2){
@@ -103,12 +101,10 @@ function voltarCarta(c1,c2){
 function verificaIgualdade(){
     const listaViradas=Array.from(document.querySelectorAll(".virada"));
     let duasAtuais=[];
-
     for(let i=0; i<=(listaViradas.length)-1; i++){
         if(listaViradas[i].classList.contains("finalizada")==false){
             duasAtuais.push(listaViradas[i]);
         }
-        
     }
     for(let k=0; k<=duasAtuais.length; k++){
         for(let j=1; j<=duasAtuais.length; j++){
@@ -117,7 +113,11 @@ function verificaIgualdade(){
                 duasAtuais[j].classList.add("finalizada");
                 finalizadas++;
                 if(finalizadas==numCartas/2){
-                    alert(`Você ganhou em ${jogadas} jogadas!`);
+                    alert(`Você ganhou em ${jogadas} jogadas e ${tempo} segundos!`);
+                    resposta=prompt("Você quer jogar novamente? 'sim' ou 'não'");
+                    if(resposta=="sim"){
+                        document.location.reload();
+                    }
                 }
             }
             else if(duasAtuais[k].classList.value!==duasAtuais[j].classList.value){
@@ -126,3 +126,10 @@ function verificaIgualdade(){
             }
         }
     }
+
+setInterval(relogio,1000);
+function relogio(){
+    tempo++;
+    const rel = document.querySelector(".relogio");
+    rel.innerHTML=tempo;
+}

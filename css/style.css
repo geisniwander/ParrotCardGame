@@ -1,32 +1,31 @@
-h1{
-    font-family: 'Roboto', sans-serif;
-    font-size: 56px;
-    font-weight: 700;
-    line-height: 66px;
-    color: #75B79E;
-    margin-top: 50px;
-    
+body{
+    background-color: #EEF9BF;
 }
 .conteudo{
     width: 100%;
     height: 980px;
-    background-color: #EEF9BF;
     display:flex;
     flex-direction: column;
     align-items: center;
+    justify-content: center;
 }
 .titulo{
     display: flex;
     justify-content: center;
+    margin-bottom: 2%;
+    font-family: 'Roboto', sans-serif;
+    font-size: 56px;
+    font-weight: 700;
+    line-height: 66px;
+    color: #75B79E;   
 }
 .carta{
-    width: 117px;
-    height: 146px;
+    width: 157px;
+    height: 186px;
     margin-left: 30px;
     margin-top: 30px;
     position: relative;
 }
-
 .face{
     width: 100%;
     height: 100%;
@@ -65,13 +64,26 @@ h1{
     width:80%;
 }
 .cartas{
-    width: 65%;
+    width: 75%;
     display: flex;
     align-items: center;
     justify-content: center;
     flex-wrap: wrap;
+    margin-bottom: 10%;
 }
-
+.relogio{
+    position: absolute;
+    right: 10px;
+    top: 10px;
+    width: 100px;
+    height: 50px;
+    background-color: black;
+    font-size:50px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: white;
+}
 
 @media (max-width:934px) {
     .conteudo{
@@ -80,6 +92,9 @@ h1{
     }
     .titulo{
         text-align: center;
+        font-size: 50px;
+        margin-top: 15%;
+        line-height: 60px;
     }
     .cartas{
         width: 100%;
@@ -87,24 +102,19 @@ h1{
     }
     .carta{
         width: 30%;
+    }
+    .relogio{
+        width: 20%;
+        height: 5%;
+        font-size: 30px;
     }
 }
 
 @media (max-width:500px) {
-    .conteudo{
-        width: 100%;
-        height: 100%;
-    }
-    .titulo{
-        text-align: center;
-    }
     .cartas{
         flex-direction: column;
-        width: 100%;
-        height: 95%;
     }
     .carta{
         margin-left:0;
-        width: 30%;
     }
 }
