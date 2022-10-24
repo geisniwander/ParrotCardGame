@@ -9,7 +9,7 @@
 </br>
 
 ## ✏️ Descrição
-<p align="justify" >Projeto de página que apresenta um jogo da memória. O usuário pode escolher uma quantidade de cartas entre 4 e 14 (sempre números pares) para jogar. O sistema conta, automaticamente, o número de jogadas (cliques em cartas) e o tempo para finalizar o jogo. Ao final, o jogador pode digitar "sim" se quiser jogar novamente.</p>
+<p align="justify" >Projeto de página que apresenta um jogo da memória. O usuário pode escolher uma quantidade de cartas entre 4 e 14 (sempre números pares) para jogar. O sistema conta, automaticamente, o número de jogadas (quantidade de cliques em cartas) e o tempo para finalizar o jogo. Ao final, o jogador pode digitar "sim" se quiser jogar novamente.</p>
 
 </br>
 

@@ -67,9 +67,11 @@ function adicionaCartas(){
     }
     container.innerHTML +=`<div class="relogio"></div>`
 }
+
 function comparador() { 
 	return Math.random() - 0.5; 
 }
+
 function virarCarta(carta){
     jogadas++;
     cont++;
